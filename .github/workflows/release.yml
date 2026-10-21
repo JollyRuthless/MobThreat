@@ -1,0 +1,25 @@
+# Builds the MobThreat zip when a version tag (like v3.2) is pushed.
+# The zip goes on the GitHub release page. Once the CurseForge project ID
+# is in MobThreat.toc and the CF_API_TOKEN secret is set, it goes to
+# CurseForge too.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: BigWigsMods/packager@v2
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_TOKEN }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

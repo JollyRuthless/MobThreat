@@ -1,0 +1,9 @@
+## Interface: 16001
+## Title: Mob Threat
+## Notes: Threat percent on enemy nameplates, plus the target glow box. Minimap button or /mobthreat for settings.
+## Author: JollyRuthless
+## Version: 1.2
+## SavedVariables: MobThreatDB
+
+MobThreat.lua
+Glow.lua
