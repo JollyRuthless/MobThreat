@@ -2,6 +2,7 @@
 ## Title: Mob Threat
 ## Notes: Threat percent on enemy nameplates, plus the target glow box. Minimap button or /mobthreat for settings.
 ## Author: JollyRuthless
+## X-Curse-Project-ID: 1755899
 ## Version: 1.2
 ## SavedVariables: MobThreatDB
 
